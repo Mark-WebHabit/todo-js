@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: url('./img/todoBg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main-container{
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 2em;
+}
+
+.form{
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form #input{
+    padding: 1em;
+    font-size: 1rem;
+    width: 40%;
+    border-radius: 1em;
+    outline: none;
+    border: none;
+    box-shadow:  0 0 5px #000;
+    margin: 0 1em;
+    background: #e6e6e6;
+}
+.form #input:focus{
+    border: 2px solid #008ae6;
+}
+@media (min-width: 1350px) {
+    .form #input{
+        width: 30%;
+    }
+}
+@media (max-width: 720px){
+    .form #input {
+            width: 50%;
+        }
+}
+@media (max-width: 500px){
+    .form #input {
+            width: 80%;
+        }
+}
+.form #add-icon{
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.main-container .tasks{
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 1em;
+}
+@media (min-width: 700px) {
+    .main-container .tasks {
+        width: 70%;
+    }
+}
+@media (min-width: 1000px){
+    .main-container .tasks {
+        width: 60%;
+    }
+}
+@media (min-width: 1350px){
+    .main-container .tasks{
+        width: 40%;
+    }
+}
+@media (min-width: 1500px){
+    .main-container .tasks {
+        width: 40%;
+    }
+}
+
+.main-container .tasks .task{
+    width: 100%;
+    padding: 0.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+.main-container .tasks .task .text{
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+}
+.main-container .tasks .task .text.completed{
+    text-decoration: line-through;
+    color: #d9d9d9;
+}
+.main-container .tasks .task .buttons .btn{
+    padding: 0.8em;
+    cursor: pointer;
+    border-radius: 1em;
+    border: none;
+    margin: 0 0.5em;
+}
+.main-container .tasks .task .buttons .btn i{
+    font-size: 1.3rem;
+}
+.main-container .tasks .task .buttons button#complete{
+    border: 1px solid green;
+    background: green;
+    color: white;
+}
+.main-container .tasks .task .buttons button#delete{
+    border: 1px solid red;
+    background: red;
+    color: #fff;
+}
+.main-container .tasks .task .buttons button#complete:hover, .main-container .tasks .task .buttons button#delete:hover  {
+    background: none;
+}
